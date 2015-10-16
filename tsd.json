@@ -4,5 +4,18 @@
   "ref": "master",
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
-  "installed": { }
+  "installed": {
+    "es6-shim/es6-shim.d.ts": {
+      "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+    },
+    "angular2/angular2.d.ts": {
+      "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+    },
+    "angular2/http.d.ts": {
+      "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+    },
+    "angular2/router.d.ts": {
+      "commit": "43f4fc592a99e2f0f8f4ee3ae26a3a8e2f5ca3ae"
+    }
+  }
 }
