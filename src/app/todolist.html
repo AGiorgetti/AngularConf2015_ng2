@@ -1,0 +1,39 @@
+<h1>Todo List</h1>
+
+<form class="form-inline">
+	<div class="form-group">
+		<label>Task: </label>
+		<input type="text" class="form-control" #task>
+	</div>
+	<button type="button" class="btn btn-default>" (click)="addTodo(task.value)">Add ToDo</button>
+</form>
+<br>
+<div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Task</th>
+				<th>Completed</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ng-for="#todo of todos">
+				<td>{{todo.id}}</td>
+				<td>{{todo.task}}</td>
+				<td>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" [(ng-model)]="todo.completed" /> {{todo.completed}}
+						</label>
+					</div>
+				</td>
+				<td>
+					<button type="button" class="btn btn-default" (click)="removeTodo(todo.id)">Delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- change detection is way different in Angular 2 <pre>{{todos | json}}</pre> -->
